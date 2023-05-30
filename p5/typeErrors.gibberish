@@ -1,0 +1,170 @@
+struct S{int s;};
+
+struct T{
+    int t;
+};
+
+struct S s1;
+struct T t1;
+void f1(int x){
+    return;
+}
+
+void f2(){
+    int x1;
+    int x2;
+    bool y1;
+    bool y2;
+    //Attempt to write a function
+    cout << f1;
+    //Attempt to write a struct name
+    cout << S;
+    //Attempt to write a struct variable
+    cout << s1;
+    //Attempt to write void
+    cout << f1();
+    //Attempt to read a function
+    cin >> f1;
+    //Attempt to read a struct name
+    cin >> S;
+    //Attempt to read a struct variable
+    cin >> s1;
+    //Attempt to call a non-function
+    x1();
+    s1();
+    //Function call with wrong number of args
+    f1();
+    f1(x1,x2);
+    //Type of actual does not match type of formal
+    f1(y1);
+    return;
+}
+
+int f3(){
+    //Missing return value
+    return;
+}
+
+void f4(){
+    //Return with a value in a void function
+    return 1;
+}
+
+int f5(){
+    //Bad return value
+    return true;
+}
+
+bool f6(){
+    //Bad return value
+    return 1;
+}
+
+void f7(){
+    int x1;
+    int x2;
+    bool y1;
+    bool y2;
+    //Arithmetic operator applied to non-numeric operand
+    x1 = x1+y1;
+    x1 = x1-y1;
+    x1 = y1+x1;
+    x1 = y1-x1;
+    x1 = x1*y1;
+    x1 = x1*y1;
+    x1 = y1/x1;
+    x1 = y1/x1;
+    y1++;
+    y1--;
+    //Relational operator applied to non-numeric operand
+    y1 = y1>y2;
+    y1 = s1>y2;
+    y1 = y1<y2;
+    y1 = s1<y2;
+    y1 = y1>=y2;
+    y1 = y1<=y2;
+    y1 = s1>=y2;
+    y1 = s1<=y2;
+    //Logical operator applied to non-bool operand
+    y2 = !x1;
+    y2 = x2&&x1;
+    y2 = x2&&s1;
+    y2 = s1||x2;
+    y2 = x1||x2;
+    //Non-bool expression used as an if condition
+    if(x1){
+    }
+    if(x2){
+    }else{
+    }
+    //Non-bool expression used as a while condition
+    while(x1){
+
+    }
+    //Non-integer expression used as a repeat clause
+    repeat(y1){
+
+    }
+    //Type mismatch
+    if(x1==y1){
+
+    }
+    y2 = x1!=y1;
+    //Equality operator applied to void functions
+    y2 = f4() == x1;
+    if(f4()==x2){
+
+    }
+    y2 = f4() != x1;
+    if(f4()!=x2){
+
+    }
+    //Equality operator applied to functions
+    y2 = f5() == x1;
+    if(f5()==x2){
+
+    }
+    y2 = f5() != x1;
+    if(f5()!=x2){
+
+    }
+    //Equality operator applied to struct names
+    y2 = S == S;
+    if(S==S){
+
+    }
+    y2 = S!= S;
+    if(S!=S){
+
+    }
+    //Equality operator applied to struct variables
+    y2 = s1 == s1;
+    if(s1==s1){
+
+    }
+    y2 = s1!= s1;
+    if(s1!=s1){
+
+    }
+    //	Function assignment
+    f1 = f2;
+    // Struct name assignment
+    S = T;
+    //Struct variable assignment
+    s1 = t1;
+    
+    //Preventing Cascading Errors
+    cout << S + 1;  // S + 1 is an error; the write is OK
+    x1 = (true + 3)*4; // true + 3 is an error; the * is OK
+    y1 =true && (false || 3);   // false || 3 is an error; the && is OK
+    f1("a" * 4);            // "a" * 4 is an error; the call is OK
+    x1 = 1 + f1();               // p() is an error; the + is OK
+    y1 = (true + 3) == x1;        // true + 3 is an error; the == is OK
+                       // regardless of the type of x
+
+    x1 = true + "hello";    // one error for each of the non-int operands of the +
+    x1 = 1 + f1(true);      // one for the bad arg type and one for the 2nd operand of the +
+    x1 = 1 + f1(1, 2);       // one for the wrong number of args and one for the 2nd operand of the +
+    return 3+true;    // in a void function: one error for the 2nd operand to +
+                  // and one for returning a value                   
+}

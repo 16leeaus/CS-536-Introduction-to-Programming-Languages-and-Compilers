@@ -1,0 +1,48 @@
++
+++
+-
+--
+/
+*
+<
+>
+<<
+>>
+!=
+!
+&&
+||
+<=
+>=
+==
+=
+{
+}
+(
+)
+;
+,
+.
+bool
+int
+void
+true
+false
+struct
+cin
+cout
+if
+else
+while
+return
+10 24
+2023
+## comment
+// comment
+_test
+test_
+test1value
+test_value
+""
+"test"
+"use \n to denote a newline character"

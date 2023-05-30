@@ -1,0 +1,10 @@
+9999999999
+$php
+"this is not terminated
+"this is also not terminated\"
+"wasdf
+"this is a bad string \
+"this is a bad escaped character: \a AND this is not terminated
+24test
+~~
+"The backslash followed by space: \ is not allowed"

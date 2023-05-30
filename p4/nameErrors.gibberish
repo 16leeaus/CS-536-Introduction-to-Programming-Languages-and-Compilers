@@ -1,0 +1,70 @@
+//Multiply declared identifier
+int x;
+bool x;
+struct x{
+    int a;
+};
+struct X x;
+
+// Multiply declared identifier in formals
+void a(int a, int b, bool a) {
+    // multiple identifier in function
+    int y;
+    int y;
+    bool y;
+    if(y){//inside if else
+        int y;
+        bool a;
+    }else{
+
+    }
+    while(y){//inside while
+        int y;
+    }
+    return;
+}
+
+//Non-function declared void
+void vx;
+//param declared void
+void fna(void fa){
+    return;
+}
+int fnb(void fa){
+    void fb;
+    return;
+}
+
+// Invalid name of struct type
+struct Sa sa;
+struct Sb sb;
+struct test {
+    struct Sc sc;
+    int sz;
+};
+
+void fnc(){
+    // Invalid name of struct type in function
+    struct Sc sc;
+    int a;
+    bool b;
+}
+
+
+struct Point{
+    int p1;
+    int p2;
+};
+
+struct Point p3;
+
+//bad dot access
+void fnd(){
+    //undeclared identifier
+    int nonstruct;
+    //Dot-access of non-struct type
+    nonstruct.x = 1;
+    //Invalid struct field name
+    p3.g = 1;
+    return;
+}

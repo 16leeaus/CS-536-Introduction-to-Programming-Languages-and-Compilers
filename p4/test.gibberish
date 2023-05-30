@@ -1,0 +1,55 @@
+int x;
+int y;
+bool z;
+struct Sc {
+    int sc;
+};
+struct Sd{
+    struct Sc sd;
+    int u;
+};
+struct Sc se;
+int fna(int a, bool b) {
+    int x;
+    int y;
+    bool z;
+    struct S s;
+    x = 1 + a;
+    return x;
+}
+
+void fnb(int c){
+    if(c == 0){
+        c++;
+    }else{
+        c--;
+    }
+    return;
+}
+
+int fnc(int x, bool y){
+    int z;
+    z = se.sc;
+    z = z * se.sc;
+    z = z /2;
+    if(z==1){
+        return z;
+    }else{
+        return 1;
+    }
+}
+
+void fnd(){
+    return;
+}
+int fne(int param1, int param2){
+    return 1;
+}
+
+void fnf(){
+    int x;
+    int y;
+    fnd();
+    fne(x,y);
+    return;
+}
